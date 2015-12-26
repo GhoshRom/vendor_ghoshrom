@@ -23,3 +23,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
     ro.setupwizard.rotation_locked=true
+
+# Proprietary latinime libs needed for Keyboard swyping
+
+PRODUCT_COPY_FILES += \
+    vendor/ghost/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
