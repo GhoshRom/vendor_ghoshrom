@@ -25,8 +25,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.rotation_locked=true
 
 # Proprietary latinime libs needed for Keyboard swyping
-
 PRODUCT_COPY_FILES += \
     vendor/ghost/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
     vendor/ghost/prebuilt/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
   
+# Fix Dialer
+PRODUCT_COPY_FILES +=  \
+    vendor/ghost/prebuilt/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
