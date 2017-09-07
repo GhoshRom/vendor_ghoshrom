@@ -1,4 +1,4 @@
-# Copyright (C) 2017 The Pure Nexus Project
+# Copyright (C) 2017 Ghost ROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,20 +12,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/ghost/configs/aosp_fixes.mk
-include vendor/ghost/configs/bootanimation.mk
-include vendor/ghost/configs/ghost_main.mk
-include vendor/ghost/configs/system_additions.mk
-
-# Telephony packages
-PRODUCT_PACKAGES += \
-    Stk \
-    CellBroadcastReceiver
-
-# Allow tethering without provisioning app
-PRODUCT_PROPERTY_OVERRIDES += \
-    net.tethering.noprovisioning=true
-
-# Thank you, please drive thru!
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.dun.override=0
+    PRODUCT_COPY_FILES += \
+        vendor/ghost/prebuilt/bootanimation/angler.zip:system/media/bootanimation.zip
