@@ -27,4 +27,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Proprietary latinime libs needed for Keyboard swyping
 
 PRODUCT_COPY_FILES += \
-    vendor/ghost/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
+    vendor/ghost/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
+    vendor/ghost/prebuilt/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
+  
