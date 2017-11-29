@@ -20,3 +20,9 @@ PRODUCT_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     Launcher3 \
     LiveWallpapersPicker
+
+# Ghost ROM version
+GHOST_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ghost.version=$(GHOST_VERSION)
